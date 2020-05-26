@@ -1,14 +1,28 @@
-//Lista di cognomi (Arrey)
-var listaCognomi = ["Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi"];
+//Surname list (Arrey)
+var surnameList = ["Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi"];
 
-// Chidere cognome all'utente
-var cognomeUtente = prompt('Quale il tuo cognome ?');
+//List Element
+var surnameList = document.getElementById('surname-list');
 
-//Inserirlo nella lista
-listaCognomi.push(cognomeUtente);
+//Add surname Form
+var addSurname = document.getElementById('add-surname');
 
-for(var i = 0; i < listaCognomi.length; i++) {
-  console.log(listaCognomi[i]);
-}
+//Event button
+var generateListBtn = document.getElementById('generate-list');
 
-//Output
+//Add Surname to the list
+generateListBtn.addEventListener('click',
+  function() {
+    //add user surname to the existing list
+    surnameList.push(addSurname.value);
+
+    //Sort list in Alphabetical Order
+    var alphabeticalOrderList = surnameList.sort();
+
+    //Print to screen the result
+    for (var i = 0; i < surnameList.length; i++) {
+      var contenutoCorrente = surnameList.innerHTML;
+      surnameList.innerHTML = contenutoCorrente + '<li>' + alphabeticalOrderList[i] + '</li>';
+    }
+  }
+)
