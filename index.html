@@ -2,21 +2,32 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Stampare lista dfi cogomi</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <main class="wrapper">
-      <h1>Lista Invitati</h1>
-      <div class="add-your-surname">
-        <label>Iscriviti all'evento</label>
-        <input type="text" id="add-surname" placeholder="Inserisci cognome">
-        <button type="button" id="generate-list"> Inserisci</button>
-      </div>
-      <div class="surname-list">
-        <h2>Lista Invitati</h2>
-        <ul id="surname-list">
-        </ul>
+      <div class="container">
+        <h1>Lista Invitati</h1>
+        <div class="row">
+
+          <div class="col-xs-12 col-md-6">
+            <h2>Partecipa all'evento</h2>
+            <input type="text" id="add-surname" placeholder="Inserisci cognome">
+            <button type="button" id="generate-list"> Inserisci</button>
+          </div>
+
+          <div class="col-xs-12 col-md-6">
+            <div class="surname-list">
+              <h2>Lista Invitati</h2>
+              <ul id="surname-list">
+              </ul>
+            </div>
+          </div>
+
+        </div>
       </div>
     </main>
   </body>
