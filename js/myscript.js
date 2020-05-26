@@ -2,7 +2,8 @@
 var surnameList = ["Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi"];
 
 //List Element
-var surnameList = document.getElementById('surname-list');
+var elementList = document.getElementById('surname-list');
+
 
 //Add surname Form
 var addSurname = document.getElementById('add-surname');
@@ -15,14 +16,11 @@ generateListBtn.addEventListener('click',
   function() {
     //add user surname to the existing list
     surnameList.push(addSurname.value);
-
-    //Sort list in Alphabetical Order
     var alphabeticalOrderList = surnameList.sort();
 
-    //Print to screen the result
     for (var i = 0; i < surnameList.length; i++) {
-      var contenutoCorrente = surnameList.innerHTML;
-      surnameList.innerHTML = contenutoCorrente + '<li>' + alphabeticalOrderList[i] + '</li>';
+      var contenutoCorrente = elementList.innerHTML;
+      elementList.innerHTML = contenutoCorrente + '<li>' + surnameList[i] + '</li>';
     }
   }
 )
