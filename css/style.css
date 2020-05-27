@@ -21,6 +21,7 @@ ul {
 
 input, button {
   outline: none;
+  margin: 10px 0;
 }
 
 button {
@@ -37,5 +38,4 @@ button {
   [class*="col-xs"] {
     margin-bottom: 20px;;
   }
-
 }
