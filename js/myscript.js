@@ -18,8 +18,8 @@ for(var i = 0; i < surnameList.length; i++) {
 generateListBtn.addEventListener( 'click',
   function() {
     //Error se il campo è vuoto
-    if(userSurname.value == '') {
-      alert('Non hai inserito il cognome');
+    if( (isNaN(parseInt(userSurname.value)) === false) || userSurname.value == '') {
+      alert('Non hai inserito il cognome valido');
     } else {
 
       //Add user Surname to the Arrey
